@@ -1,0 +1,317 @@
+/* Mobile */
+
+@media only screen and (max-device-width : 1024px)
+{
+    .records-container {
+        width: 100%;
+    }
+
+    .matchups, .buttons {
+        padding: 5px;
+        width: 100%;
+        max-width: 95%;
+        font-size: 1.8em;
+    }
+
+    .matchup {
+        display: grid;
+        grid-template-columns: 49% 2% 49%;
+        margin-bottom: 20px;
+    }
+
+    .player {
+        margin-bottom: 8px;
+    }
+
+    .refresh {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+/* Desktop */
+
+@media only screen and (min-width : 1025px)
+{
+    .records-container {
+        width: 30%;
+    }
+
+    .buttons-container {
+        width: 25%;
+        padding-left: 50px;
+        padding-right: 30px;
+    }
+
+    .matchup {
+        display: grid;
+        grid-template-columns: 47.5% 5% 47.5%;
+        margin-bottom: 10px;
+        width: 30%;
+    }
+
+    .player {
+        margin-bottom: 2px;
+    }
+
+    .refresh {
+        width: 20%;
+        text-align: center;
+    }
+}
+
+div.buttons {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 40%;
+}
+
+div.buttons div {
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    background: dimgray;
+}
+
+div.records, div.records-header {
+    display: grid;
+    grid-template-columns: 35% 15% 15% 15% 10% 10%;
+}
+
+div.records-header {
+    font-weight: bolder;
+}
+
+div.record-name {
+    text-align: center;
+    margin: 10px 0px;
+    color: goldenrod;
+}
+
+div.records-container div.league-name {
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+div.records div, div.records-header div {
+    padding: 2px 10px;
+}
+
+div.record-owner {
+    text-align: right;
+}
+
+div.record-points, div.record-projected, div.record-diff, div.record-year, div.record-week {
+    text-align: center;
+}
+
+div.records div.positive {
+    color: rgb(0, 90, 0);
+}
+
+div.records div.negative {
+    color: rgb(90, 0, 0);
+}
+
+div.recommended-pane {
+    display: none;
+    position: absolute;
+    background: black;
+    width: 15%;
+}
+
+.recommended-pane .recommended, .recommended-pane .bench {
+    grid-template-columns: 15% 85%;
+    display: grid;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+
+.team-header {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.team-header.even {
+    grid-template-columns: 10% 40% 25% 25%;
+}
+
+.player.even {
+    grid-template-columns: 50% 25% 25%;
+}
+
+.team-header.odd {
+    grid-template-columns: 25% 25% 40% 10%;
+}
+
+.player.odd {
+    grid-template-columns: 25% 25% 50%;
+}
+
+.team-name {
+    /* display: grid; */
+    align-items: center;
+    padding: 10px 5px 5px 5px;
+    font-weight: bolder;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: auto;
+    width: 90%;
+}
+
+.team-header.even .team-name {
+    padding-right: 10px;
+    /* text-align: right; */
+}
+
+.team-header.odd .team-name {
+    padding-left: 10px;
+    /* text-align: left; */
+}
+
+.team-points, .team-projected {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    padding: 10px 5px 5px 5px;
+    font-weight: bolder;
+}
+
+.team-points {
+    font-size: 1.2em;
+}
+
+.player-header {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+.player {
+    display: grid;
+    border: 1px solid #000;
+    border-radius: 25px;
+}
+
+.player div {
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.player.today {
+    border-color: darkgreen;
+}
+
+.player.played {
+    border-color: black;
+}
+
+.player.bye {
+    border-color: darkgoldenrod;
+}
+
+.player.future {
+    border-color: #333;
+}
+
+.team-projected, .player.active .projected, .player.none .projected, .player.normal .projected {
+    color: #ddd;
+}
+
+.player.warning {
+    color: yellow !important;
+}
+
+.player.questionable {
+    color: darkorange !important;
+}
+
+.player.injury_reserve, .player.ir, .player.out, .player.doubtful {
+    color: #d00 !important;
+}
+
+.player .name {
+    padding: 3px 10px;
+}
+
+.player.even .name {
+    text-align: right;
+}
+
+.player .projected, .player .points, .team-points, .team-projected {
+    font-family: monospace;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.player .display {
+    font-family: monospace;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.player.playing {
+    background-color: darkgreen;
+}
+
+.player.played {
+    background-color: #333;
+}
+
+.player.future {
+    background-color: black;
+}
+
+.changes-container {
+    width: 30%;
+}
+
+.change {
+    display: grid;
+    grid-template-columns: 25% 5% 5% 25% 10% 30%;
+}
+
+.change-team, .change-scoring, .change-scores, .change-diff {
+    text-align: center;
+}
+
+.change-updated {
+    text-align: right;
+}
+
+span.change-positive {
+    color: green;
+}
+
+span.change-negative {
+    color: red;
+}
+
+div.team-projected.winning {
+    color: yellow;
+}
+
+div.team-points.winning {
+    color: lawngreen;
+}

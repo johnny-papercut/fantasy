@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>fantasy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+</head>
+<body>
+    <div class="records-container">
+    {% for league_name, league_data in records.items() %}
+        <div class="league-records">
+            <div class="league-name">{{ league_name }}</div>
+            {% for record_name, record_data in league_data.items() %}
+                <div class="record-name">{{ record_name }}</div>
+                <div class="records-header">
+                    <div class="record-owner">Team</div>
+                    <div class="record-points">Points</div>
+                    <div class="record-projected">Projected</div>
+                    <div class="record-diff">Diff</div>
+                    <div class="record-week">Week</div>
+                    <div class="record-year">Year</div>
+                </div>
+                {% for record in record_data %}
+                {% set dc = "positive" if record[6] > 0 else "negative" %}
+                {% set diff = "+" + record[6]|string if record[6] >= 0 else record[6]|string %}
+                <div class="records">
+                    <div class="record-owner">{{ record[3]|title }}</div>
+                    <div class="record-points">{{ record[4] }}</div>
+                    <div class="record-projected">{{ record[5] }}</div>
+                    <div class="record-diff {{ dc }}">{{ diff }}</div>
+                    <div class="record-week">{{ record[1] }}</div>
+                    <div class="record-year">{{ record[0] }}</div>
+                </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>

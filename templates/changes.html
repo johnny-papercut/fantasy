@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>fantasy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+</head>
+<body>
+    <div class="changes-container">
+    {% for change in changes %}
+        <div class="change">
+            <div class="change-player">{{ change.player }}</div>
+            <div class="change-team">{{ change.team }}</div>
+            <div class="change-scoring">{{ change.scoring }}</div>
+            <div class="change-scores">{{ change.old }} -> {{ change.new }}</div>
+            <div class="change-diff">{{ change.diff|safe }}</div>
+            <div class="change-updated">{{ change.updated }}</div>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
